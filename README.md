@@ -9,3 +9,5 @@ vsb2007 Platform repository
 - Создал Dockerfile для http сервера - на python http.server.
 - Создал манифест web-pod.yaml, согласно дз - посмотрел все стадии запуска, случано его удалил и восстановил из команды `kubectl get pod web -o yaml`.
 - С помощью `kubectl port-forward --address 0.0.0.0 pod/web 8000:8000` подцепился к страничке из init контейнера.
+- Скопировал репозиторий hipster shop, собрал/запушил образ frontend
+- Запустил под frontend - добавил необходимые переменные в env для запуска
