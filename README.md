@@ -11,3 +11,4 @@ vsb2007 Platform repository
 - С помощью `kubectl port-forward --address 0.0.0.0 pod/web 8000:8000` подцепился к страничке из init контейнера.
 - Скопировал репозиторий hipster shop, собрал/запушил образ frontend
 - Запустил под frontend - добавил необходимые переменные в env для запуска
+- Жду отработки travis
