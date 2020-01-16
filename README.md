@@ -11,3 +11,28 @@ vsb2007 Platform repository
 - С помощью `kubectl port-forward --address 0.0.0.0 pod/web 8000:8000` подцепился к страничке из init контейнера.
 - Скопировал репозиторий hipster shop, собрал/запушил образ frontend
 - Запустил под frontend - добавил необходимые переменные в env для запуска
+
+## ДЗ:03
+- Установил kind и создал кластер
+- Созлал и запустил манифест replicaset
+- Поигрались с количеством подов и версиями образов в replicaset. Поды с отличной версией не появляются,
+  т.к. replicaset не перезпускает поды, а только следит за количеством.
+- Создал и запушил образы paymentService.
+- Создал манифест paymentservice-replicaset.yaml
+- Создал манифест paymentservice-deployment.yaml
+- Запустил paymentservice-deployment.yaml с разными версиями образа, сделал rollout.
+- Создал манифесты с различными стратегиями обновления подов paymentservice-deployment-bg.yaml и paymentservice-deployment-reverse.yaml
+- Создал манифест frontend-deployment.yaml, добавил readinessProbe - попровал не рабочий readinessProbe - обновление подов не проходит
+- Создал манифест node-exporter-daemonset.yaml - нашел в [инете](https://raw.githubusercontent.com/coreos/kube-prometheus/master/manifests/node-exporter-daemonset.yaml)
+для завертывания на мастер-нодах нужно добавить следующее:
+```
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+```
+но уже было добавлено:
+```
+      tolerations:
+      - operator: Exists
+```
+что тоже работает....
