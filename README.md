@@ -24,7 +24,7 @@ vsb2007 Platform repository
 - Создал манифесты с различными стратегиями обновления подов paymentservice-deployment-bg.yaml и paymentservice-deployment-reverse.yaml
 - Создал манифест frontend-deployment.yaml, добавил readinessProbe - попровал не рабочий readinessProbe - обновление подов не проходит
 - Создал манифест node-exporter-daemonset.yaml - нашел в [инете](https://raw.githubusercontent.com/coreos/kube-prometheus/master/manifests/node-exporter-daemonset.yaml)
-для завертывания на мастер-нодах нужно добавить следующее:
+для развертывания на мастер-нодах нужно добавить следующее:
 ```
       tolerations:
       - key: node-role.kubernetes.io/master
