@@ -88,8 +88,8 @@ vsb2007 Platform repository
 1. Созданы все файлы согласно ДЗ
 2. Собран и выложен образ на dockerhub
 Как проверить работоспособность:
+```
 $ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
-<code>
 mysql: [Warning] Using a password on the command line interface can be insecure.
 +----+-------------+
 | id | name |
@@ -102,4 +102,4 @@ $ kubectl get jobs.batch
 NAME COMPLETIONS DURATION AGE
 backup-mysql-instance-job 1/1 4s 9m9s
 restore-mysql-instance-job 1/1 38s 8m29s
-</code>
+```
