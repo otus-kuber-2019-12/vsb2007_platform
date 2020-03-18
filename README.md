@@ -83,3 +83,23 @@ vsb2007 Platform repository
 6. Чарт frontend установил, как зависимость в чарт hipster-shop
 7. paymentservice и shippingservice вынес в kubecfg
 8. productcatalogservice вынес в kustomize
+
+## ДЗ:09
+1. Созданы все файлы согласно ДЗ
+2. Собран и выложен образ на dockerhub
+Как проверить работоспособность:
+```
+$ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name       |
++----+-------------+
+| 1 | some data   |
+| 2 | some data-2 |
++----+-------------+
+
+$ kubectl get jobs.batch
+NAME COMPLETIONS DURATION AGE
+backup-mysql-instance-job 1/1 4s 9m9s
+restore-mysql-instance-job 1/1 38s 8m29s
+```
