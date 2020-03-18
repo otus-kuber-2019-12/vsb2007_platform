@@ -92,9 +92,9 @@ vsb2007 Platform repository
 $ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
 mysql: [Warning] Using a password on the command line interface can be insecure.
 +----+-------------+
-| id | name |
+| id | name       |
 +----+-------------+
-| 1 | some data |
+| 1 | some data   |
 | 2 | some data-2 |
 +----+-------------+
 
