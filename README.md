@@ -74,6 +74,16 @@ vsb2007 Platform repository
 2. Cоздали Secret для minio
 3. Изменили minio-statefulset.yaml - убрали открытые данные, заменив на данные из secret
 
+## ДЗ:08
+1. Установлен nginx-ingress
+2. Установлен cert-manager
+3. Установлен и сконфигурирован charmuseum
+4. Установлен и сконфигурирован Harbor
+5. Создан свой helm chart для frontend. Введены шаблоны значений через values.yaml
+6. Чарт frontend установил, как зависимость в чарт hipster-shop
+7. paymentservice и shippingservice вынес в kubecfg
+8. productcatalogservice вынес в kustomize
+
 ## ДЗ:09
 1. Созданы все файлы согласно ДЗ
 2. Собран и выложен образ на dockerhub
